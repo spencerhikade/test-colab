@@ -4,22 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <<<<<<< HEAD <title>I'm student B </title>
-        =======
-        <title>I'm Student A</title>
-        >>>>>>> 63c15467da122c2f6125e77009fd446f859dcd99
+    <title>Graph Test</title>
+
 </head>
 
-<body>
-    <div>
-        <p>Paragraph 1</p>
-    </div>
+<script type="text/javascript">
+    window.onload = function () {
+        var c = new CanvasJS.Chart("first", {
+            zoomEnabled: true,
+            title: {
+                text: "Bond Shape Graph"
+            },
+            axisX: {
+                title: "X axis",
+                interval: 1
+            },
+            axisY: {
+                title: "Y axis"
+            },
+            data: [{
+                type: "line",
+                xValueType: "area",
+                dataPoints: [{
+                        x: 10,
+                        y: 10
+                    },
+                    {
+                        x: 11,
+                        y: 60
+                    },
+                    {
+                        x: 12,
+                        y: 70
+                    },
+                    {
+                        x: 13,
+                        y: 70
+                    },
+                    {
+                        x: 14,
+                        y: 60
+                    },
+                    {
+                        x: 15,
+                        y: 10
+                    },
+                ]
+            }]
+        });
+        c.render();
+    }
+</script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
-    <div>
-        <p>Paragraph 2</p>
+<body>
+    <div id="first" style="height: 303px; padding-right: 10%;">
     </div>
-    <p>Even more changes</p>
-    <b>bolded text</b>
 </body>
 
 </html>
